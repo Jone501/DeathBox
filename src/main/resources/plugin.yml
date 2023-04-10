@@ -1,0 +1,4 @@
+name: DeathBox
+version: '${project.version}'
+main: ru.plugins.deathbox.deathbox.Plugin
+api-version: 1.16
