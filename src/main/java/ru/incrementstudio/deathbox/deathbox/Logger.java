@@ -1,7 +1,7 @@
-package ru.plugins.deathbox.deathbox;
+package ru.incrementstudio.deathbox.deathbox;
 
 import org.bukkit.ChatColor;
-import ru.plugins.deathbox.deathbox.utils.ColorUtil;
+import ru.incrementstudio.deathbox.deathbox.utils.ColorUtil;
 
 public class Logger {
     public static void info(String string) {

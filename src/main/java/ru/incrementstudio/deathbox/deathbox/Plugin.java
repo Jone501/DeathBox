@@ -1,4 +1,4 @@
-package ru.plugins.deathbox.deathbox;
+package ru.incrementstudio.deathbox.deathbox;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -25,6 +25,7 @@ public final class Plugin extends JavaPlugin {
 
         Logger.info("&f| Загрузка ивентов...");
         getServer().getPluginManager().registerEvents(new DeathEvent(), this);
+        getServer().getPluginManager().registerEvents(new BlockEvent(), this);
 
         Logger.info("&f| Плагин успешно запущен!");
     }

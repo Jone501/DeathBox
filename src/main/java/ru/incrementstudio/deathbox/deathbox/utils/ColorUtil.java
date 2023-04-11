@@ -1,4 +1,4 @@
-package ru.plugins.deathbox.deathbox.utils;
+package ru.incrementstudio.deathbox.deathbox.utils;
 
 import org.bukkit.ChatColor;
 

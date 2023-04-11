@@ -1,4 +1,4 @@
-package ru.plugins.deathbox.deathbox;
+package ru.incrementstudio.deathbox.deathbox;
 
 import com.google.common.base.Charsets;
 import org.bukkit.configuration.file.FileConfiguration;
