@@ -1,4 +1,4 @@
-package ru.incrementstudio.deathbox.deathbox.utils;
+package ru.incrementstudio.incdeathbox.utils;
 
 public class ConfigUtil {
     public static String combinePath(String ... elements) {

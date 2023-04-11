@@ -1,6 +1,7 @@
-box-block-type: CRYING_OBSIDIAN # Материал смертельной коробки (https://helpch.at/docs/1.16.5/org/bukkit/Material.html)
-open-sound: BLOCK_ANVIL_LAND # Звук, который будет воспроизводиться после открытия коробки (https://helpch.at/docs/1.16.5/org/bukkit/Sound.html)
+box-name: "%player%`s death box" # Текст, отображающийся над смертельной коробкой ( %player% = ник умершего игрока )
+box-block-type: CRYING_OBSIDIAN # Материал смертельной коробки ( https://helpch.at/docs/1.16.5/org/bukkit/Material.html )
+open-sound: BLOCK_ANVIL_LAND # Звук, который будет воспроизводиться после открытия коробки ( https://helpch.at/docs/1.16.5/org/bukkit/Sound.html )
 open-sound-volume: 0.25 # Громкость звука
 open-sound-pitch: 1.25 # Высота звука
-open-particle: SPELL_WITCH # Частица, которая будет появляться после открытия коробки (https://helpch.at/docs/1.16.5/org/bukkit/Particle.html)
+open-particle: SPELL_WITCH # Частица, которая будет появляться после открытия коробки ( https://helpch.at/docs/1.16.5/org/bukkit/Particle.html )
 open-particle-count: 100 # Количество частиц

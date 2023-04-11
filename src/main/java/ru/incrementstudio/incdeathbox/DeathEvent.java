@@ -1,15 +1,18 @@
-package ru.incrementstudio.deathbox.deathbox;
+package ru.incrementstudio.incdeathbox;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.entity.ArmorStand;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
-import ru.incrementstudio.deathbox.deathbox.utils.ConfigUtil;
-import ru.incrementstudio.deathbox.deathbox.utils.LocationUtil;
-import ru.incrementstudio.deathbox.deathbox.utils.PlayerUtil;
+import ru.incrementstudio.incdeathbox.utils.ColorUtil;
+import ru.incrementstudio.incdeathbox.utils.ConfigUtil;
+import ru.incrementstudio.incdeathbox.utils.LocationUtil;
+import ru.incrementstudio.incdeathbox.utils.PlayerUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +36,20 @@ public class DeathEvent implements Listener {
             Files.deathboxes.save();
 
             location.getBlock().setType(Material.valueOf(Files.config.get().getString("box-block-type")));
+
+            ArmorStand armorstand = (ArmorStand) location.getWorld().spawnEntity(location.add(0.5, 0, 0.5), EntityType.ARMOR_STAND);
+            armorstand.setCollidable(false);
+            armorstand.setInvulnerable(true);
+            armorstand.setSilent(true);
+            armorstand.setSmall(true);
+            armorstand.setFireTicks(0);
+            armorstand.setVisible(false);
+            armorstand.setCanMove(false);
+            armorstand.setGravity(false);
+            armorstand.setCustomName(ColorUtil.toColor(Files.config.get().getString("box-name")
+                    .replace("%player%", PlayerUtil.getName(player))
+            ));
+            armorstand.setCustomNameVisible(true);
         }
         event.getDrops().clear();
     }

@@ -1,4 +1,4 @@
-name: DeathBox
+name: IncDeathBox
 version: '${project.version}'
-main: ru.incrementstudio.deathbox.deathbox.Plugin
+main: ru.incrementstudio.incdeathbox.Plugin
 api-version: 1.16

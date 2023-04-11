@@ -1,15 +1,16 @@
-package ru.incrementstudio.deathbox.deathbox;
+package ru.incrementstudio.incdeathbox;
 
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import ru.incrementstudio.deathbox.deathbox.utils.ConfigUtil;
-import ru.incrementstudio.deathbox.deathbox.utils.LocationUtil;
+import ru.incrementstudio.incdeathbox.utils.ConfigUtil;
+import ru.incrementstudio.incdeathbox.utils.LocationUtil;
 
 public class BlockEvent implements Listener {
     @EventHandler
@@ -32,6 +33,10 @@ public class BlockEvent implements Listener {
                         (float) Files.config.get().getDouble("open-sound-volume"),
                         (float) Files.config.get().getDouble("open-sound-pitch")
                 );
+                for (ArmorStand armorStand : block.getLocation().getNearbyEntitiesByType(ArmorStand.class, 1)) {
+                    armorStand.setCustomNameVisible(false);
+                    armorStand.setHealth(0);
+                }
             }
             Files.deathboxes.get().set(ConfigUtil.combinePath(LocationUtil.serializeInt(block.getLocation())), null);
             Files.deathboxes.save();

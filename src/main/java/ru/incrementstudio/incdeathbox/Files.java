@@ -1,8 +1,8 @@
-package ru.incrementstudio.deathbox.deathbox;
+package ru.incrementstudio.incdeathbox;
 
 public class Files {
-    public final static Config config = new Config("plugins//DeathBox//config.yml");
-    public final static Config deathboxes = new Config("plugins//DeathBox//deathboxes.yml");
+    public final static Config config = new Config("plugins//IncDeathBox//config.yml");
+    public final static Config deathboxes = new Config("plugins//IncDeathBox//deathboxes.yml");
 
     public static void reloadAllFiles() {
         config.reload();

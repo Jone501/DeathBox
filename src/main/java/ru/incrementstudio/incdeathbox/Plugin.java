@@ -1,4 +1,4 @@
-package ru.incrementstudio.deathbox.deathbox;
+package ru.incrementstudio.incdeathbox;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
